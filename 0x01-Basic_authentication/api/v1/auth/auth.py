@@ -5,10 +5,12 @@ the auth class
 from flask import request
 from typing import List
 
+
 class Auth:
     """
     class for auth
     """
+
     def require_auth(self, path: str, excluded_paths: List[str]) -> bool:
         """
         require something
@@ -20,12 +22,13 @@ class Auth:
         authorisation header
         """
         return None
-    
+
     def current_user(self, request=None) -> None:
         """
         current user
         """
         return None
+
 
 if __name__ == "__main__":
     a = Auth()
