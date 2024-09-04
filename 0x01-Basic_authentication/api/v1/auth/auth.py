@@ -3,30 +3,31 @@
 the auth class
 """
 from flask import request
+from typing import List
 
 class Auth:
-   '''
-   i dont know for 
-   ''' 
+    """
+    class for auth
+    """
     def require_auth(self, path: str, excluded_paths: List[str]) -> bool:
         """
         require something
         """
-        returns False
+        return False
 
-    def authorization_header(self, request=None) -> str:
+    def authorization_header(self, request=None) -> None:
         """
         authorisation header
         """
-        returns None
+        return None
     
-    def current_user(self, request=None) -> TypeVar('User'):
+    def current_user(self, request=None) -> None:
         """
         current user
         """
-        returns None
+        return None
 
-if __neme__ == "__main__":
+if __name__ == "__main__":
     a = Auth()
     print(a.require_auth("/api/v1/status/", ["/api/v1/status/"]))
     print(a.authorization_header())
