@@ -51,7 +51,7 @@ def authenticate():
     if auth.authorization_header(request) is None:
          abort(401)
     if auth.current_user(request) is None:
-        return abort(403)
+        abort(403)
 
 
 
